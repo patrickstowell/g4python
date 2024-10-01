@@ -23,6 +23,7 @@
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
 #include <pybind11/pybind11.h>
+#include "G4VTouchable.hh"
 #include "G4TouchableHistory.hh"
 #include "G4VPhysicalVolume.hh"
 #include "G4VSolid.hh"
@@ -32,9 +33,9 @@ namespace py = pybind11;
 // ==========================================================================
 void export_G4TouchableHistory(py::module& m)
 {
-  py::class_<G4VTouchable>(m, "G4VTouchable");
+  //py::class_<G4VTouchable>(m, "G4VTouchable");
 
-  py::class_<G4TouchableHistory, G4VTouchable>(m, "G4TouchableHistory")
+  py::class_<G4TouchableHistory>(m, "G4TouchableHistory")
   // ---
   .def("GetVolume",           &G4TouchableHistory::GetVolume,
                               py::arg("depth") = 0,

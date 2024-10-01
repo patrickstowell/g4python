@@ -77,4 +77,4 @@ set(GEANT4_LIBRARIES  G4Tree G4FR G4GMocren G4visHepRep
                       G4geometry G4materials G4graphics_reps G4intercoms
                       G4global G4ptl G4clhep G4zlib)
 
-set(GEANT4_LIBRARIES_WITH_OGL G4OpenGL G4gl2ps ${GEANT4_LIBRARIES})
+set(GEANT4_LIBRARIES_WITH_OGL G4OpenGL ${GEANT4_LIBRARIES})

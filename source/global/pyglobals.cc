@@ -24,7 +24,7 @@
 // ********************************************************************
 #include <pybind11/pybind11.h>
 #include "G4PyCoutDestination.hh"
-#include "G4strstreambuf.hh"
+//#include "G4strstreambuf.hh"
 #include "G4UImanager.hh"
 
 namespace py = pybind11;
@@ -38,8 +38,8 @@ void SetG4PyCoutDestination()
 {
   auto UImgr = G4UImanager::GetUIpointer();
   auto pycout = new G4PyCoutDestination();
-  G4coutbuf.SetDestination(pycout);
-  G4cerrbuf.SetDestination(pycout);
+//  G4coutbuf.SetDestination(pycout);
+//  G4cerrbuf.SetDestination(pycout);
 }
 
 // --------------------------------------------------------------------------
